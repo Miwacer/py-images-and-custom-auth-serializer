@@ -116,7 +116,7 @@ class MovieViewSet(
         url_path="upload-image"
     )
     def upload_image(self, request, pk=None):
-        item = get_objects()
+        item = self.get_objects()
         serializer = self.get_serializer(item, data=request.data)
 
         if serializer.is_valid():

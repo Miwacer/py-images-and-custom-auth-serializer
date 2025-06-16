@@ -43,7 +43,7 @@ def movie_image_path(instance, filename):
     _, extension = os.path.splitext(filename)
     return os.path.join(
         "/upload-image/",
-        f"{slugify(instance.title)}-{uuid}{extension}"
+        f"{slugify(instance.title)}-{uuid.uuid4()}{extension}"
     )
 
 
